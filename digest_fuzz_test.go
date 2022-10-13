@@ -9,3 +9,11 @@ func FuzzParse(f *testing.F) {
 		return
 	})
 }
+
+func FuzzDigest_Encoded(f *testing.F) {
+	f.Fuzz(func(t *testing.T, digest string) {
+		f.Fuzz(func(t *testing.T, data []byte) {
+			Digest(digest).sepIndex()
+		})
+	})
+}
