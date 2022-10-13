@@ -10,7 +10,7 @@ func FuzzParse(f *testing.F) {
 	})
 }
 
-func FuzzDigest_Encoded(f *testing.F) {
+func FuzzDigest_sepIndex(f *testing.F) {
 	f.Fuzz(func(t *testing.T, digest string) {
 		f.Fuzz(func(t *testing.T, data []byte) {
 			Digest(digest).sepIndex()
