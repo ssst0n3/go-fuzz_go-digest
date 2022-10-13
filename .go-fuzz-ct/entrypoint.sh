@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 fuzztime=30s
 pkgs=$(git grep 'func Fuzz.*testing\.F' | grep -o '.*\/' | sort | uniq)
 
